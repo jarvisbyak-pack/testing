@@ -1,0 +1,187 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
+&lt;meta name="description" content="Rahul Jo Photography — Premium photography for weddings, portraits, fashion &amp; events. Based in India. Book your session today."&gt;
+&lt;title&gt;Rahul Jo Photography — Premium Wedding, Portrait &amp; Fashion Photography&lt;/title&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"&gt;
+&lt;style&gt;
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--bg2:#111;--gold:#c9a84c;--gold2:#e8d48b;--txt:#f0f0f0;--muted:#999;--card:#161616}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:'Playfair Display',serif}
+a{color:var(--gold);text-decoration:none;transition:.3s}
+a:hover{color:var(--gold2)}
+img{max-width:100%;display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+nav{position:fixed;top:0;width:100%;background:rgba(10,10,10,.95);backdrop-filter:blur(10px);z-index:1000;padding:15px 0;border-bottom:1px solid #222}
+nav .wrap{display:flex;align-items:center;justify-content:space-between}
+nav .logo{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold)}
+nav ul{list-style:none;display:flex;gap:25px}
+nav ul a{color:var(--txt);font-size:.9rem;font-weight:500}
+nav ul a:hover{color:var(--gold)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+.hamburger span{width:25px;height:2px;background:var(--gold);transition:.3s}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,rgba(10,10,10,.8),rgba(10,10,10,.6)),url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1400&auto=format&fit=crop') center/cover no-repeat;padding:80px 20px}
+.hero h1{font-size:clamp(2rem,6vw,4rem);color:var(--gold);margin-bottom:15px;letter-spacing:2px}
+.hero p{font-size:clamp(1rem,2.5vw,1.3rem);color:var(--muted);max-width:600px;margin:0 auto 30px}
+.btn{display:inline-block;padding:14px 35px;background:var(--gold);color:#000;font-weight:600;border-radius:50px;font-size:1rem;transition:.3s;border:none;cursor:pointer}
+.btn:hover{background:var(--gold2);transform:translateY(-2px);color:#000}
+.btn-outline{background:transparent;border:2px solid var(--gold);color:var(--gold)}
+.btn-outline:hover{background:var(--gold);color:#000}
+section{padding:80px 0}
+.section-title{text-align:center;margin-bottom:50px}
+.section-title h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--gold);margin-bottom:10px}
+.section-title p{color:var(--muted);max-width:500px;margin:0 auto}
+.portfolio{background:var(--bg2)}
+.filters{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+.filters button{padding:8px 22px;background:transparent;border:1px solid #333;color:var(--muted);border-radius:30px;cursor:pointer;transition:.3s;font-size:.9rem}
+.filters button:hover,.filters button.active{border-color:var(--gold);color:var(--gold)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.gallery img{width:100%;height:280px;object-fit:cover;border-radius:10px;transition:.4s}
+.gallery img:hover{transform:scale(1.02);box-shadow:0 10px 30px rgba(201,168,76,.15)}
+.services,.about,.testimonial{background:var(--bg)}
+.services{background:var(--bg2)}
+.s-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px}
+.s-card{background:var(--card);padding:30px;border-radius:12px;border:1px solid #222;text-align:center;transition:.3s}
+.s-card:hover{border-color:var(--gold);transform:translateY(-5px)}
+.s-card h3{color:var(--gold);margin:15px 0 10px}
+.s-card p{color:var(--muted);font-size:.9rem}
+.about-content{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-content img{border-radius:12px}
+.about-content p{color:var(--muted);margin:15px 0}
+.testimonial{background:var(--bg2)}
+.t-card{max-width:600px;margin:0 auto;background:var(--card);padding:40px;border-radius:12px;text-align:center;border:1px solid #222}
+.t-card p{font-style:italic;color:var(--muted);margin-bottom:15px}
+.t-card .name{color:var(--gold);font-weight:600}
+.enquiry{background:var(--bg)}
+.enquiry-form{max-width:500px;margin:0 auto}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;margin-bottom:6px;color:var(--muted);font-size:.9rem}
+.form-group input,.form-group textarea{width:100%;padding:12px 15px;background:var(--card);border:1px solid #333;border-radius:8px;color:var(--txt);font-family:inherit;font-size:1rem}
+.form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--gold)}
+.form-group textarea{height:120px;resize:vertical}
+.contact{background:var(--bg2)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;text-align:center}
+.contact-card{padding:30px;background:var(--card);border-radius:12px;border:1px solid #222}
+.contact-card h3{color:var(--gold);margin-bottom:10px}
+.contact-card p{color:var(--muted)}
+footer{background:var(--bg);text-align:center;padding:30px 20px;border-top:1px solid #222;color:var(--muted);font-size:.85rem}
+.whatsapp-float{position:fixed;bottom:25px;right:25px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 4px 15px rgba(37,211,102,.4);z-index:999;transition:.3s}
+.whatsapp-float:hover{transform:scale(1.1)}
+.phone-float{position:fixed;bottom:25px;left:25px;width:60px;height:60px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 15px rgba(201,168,76,.4);z-index:999;transition:.3s}
+.phone-float:hover{transform:scale(1.1)}
+@media(max-width:768px){
+.hamburger{display:flex}
+nav ul{display:none;position:absolute;top:100%;left:0;width:100%;background:rgba(10,10,10,.98);flex-direction:column;padding:20px;gap:15px;text-align:center}
+nav ul.open{display:flex}
+.about-content{grid-template-columns:1fr}
+.gallery{grid-template-columns:1fr}
+.hero{min-height:80vh}
+}
+&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;nav&gt;&lt;div class="wrap"&gt;
+&lt;a href="#" class="logo"&gt;Rahul Jo Photography&lt;/a&gt;
+&lt;button class="hamburger" id="menuBtn" aria-label="Toggle navigation menu"&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;ul id="navLinks"&gt;&lt;li&gt;&lt;a href="#portfolio"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#enquiry"&gt;Enquiry&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;&lt;/nav&gt;
+&lt;header class="hero"&gt;&lt;div&gt;
+&lt;h1&gt;Rahul Jo Photography&lt;/h1&gt;
+&lt;p&gt;Capturing life's most precious moments with a cinematic, timeless artistry. Weddings, Portraits, Fashion &amp; Events.&lt;/p&gt;
+&lt;a href="#enquiry" class="btn"&gt;Book Your Session&lt;/a&gt;
+&lt;/div&gt;&lt;/header&gt;
+&lt;section class="portfolio" id="portfolio"&gt;&lt;div class="wrap"&gt;
+&lt;div class="section-title"&gt;&lt;h2&gt;Portfolio&lt;/h2&gt;&lt;p&gt;A glimpse into our world of visual storytelling&lt;/p&gt;&lt;/div&gt;
+&lt;div class="filters"&gt;&lt;button class="active" data-cat="all"&gt;All&lt;/button&gt;
+&lt;button data-cat="wedding"&gt;Weddings&lt;/button&gt;
+&lt;button data-cat="portrait"&gt;Portraits&lt;/button&gt;
+&lt;button data-cat="fashion"&gt;Fashion&lt;/button&gt;
+&lt;button data-cat="events"&gt;Events&lt;/button&gt;&lt;/div&gt;
+&lt;div class="gallery"&gt;
+&lt;img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&auto=format&fit=crop" alt="Wedding couple portrait" class="wedding" loading="lazy"&gt;
+&lt;img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&auto=format&fit=crop" alt="Elegant female portrait" class="portrait" loading="lazy"&gt;
+&lt;img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop" alt="Fashion model in studio" class="fashion" loading="lazy"&gt;
+&lt;img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&auto=format&fit=crop" alt="Wedding ceremony moment" class="wedding" loading="lazy"&gt;
+&lt;img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop" alt="Fashion portrait model" class="portrait fashion" loading="lazy"&gt;
+&lt;img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&auto=format&fit=crop" alt="Conference event photography" class="events" loading="lazy"&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class="services" id="services"&gt;&lt;div class="wrap"&gt;
+&lt;div class="section-title"&gt;&lt;h2&gt;Services&lt;/h2&gt;&lt;p&gt;Professional photography for every occasion&lt;/p&gt;&lt;/div&gt;
+&lt;div class="s-grid"&gt;
+&lt;div class="s-card"&gt;&lt;h3&gt;Wedding Photography&lt;/h3&gt;&lt;p&gt;Full-day coverage with cinematic storytelling, candid moments, and timeless portraits for your special day.&lt;/p&gt;&lt;/div&gt;
+&lt;div class="s-card"&gt;&lt;h3&gt;Portrait Sessions&lt;/h3&gt;&lt;p&gt;Professional headshots, family portraits, and personal branding photoshoots tailored to your style.&lt;/p&gt;&lt;/div&gt;
+&lt;div class="s-card"&gt;&lt;h3&gt;Fashion Shoots&lt;/h3&gt;&lt;p&gt;Editorial, lookbook, and campaign photography with creative direction and premium quality.&lt;/p&gt;&lt;/div&gt;
+&lt;div class="s-card"&gt;&lt;h3&gt;Event Coverage&lt;/h3&gt;&lt;p&gt;Corporate events, conferences, and private celebrations captured with precision and artistry.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class="about" id="about"&gt;&lt;div class="wrap"&gt;
+&lt;div class="section-title"&gt;&lt;h2&gt;About Rahul&lt;/h2&gt;&lt;p&gt;The photographer behind the lens&lt;/p&gt;&lt;/div&gt;
+&lt;div class="about-content"&gt;
+&lt;img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop" alt="Rahul Jo — professional photographer portrait" loading="lazy"&gt;
+&lt;div&gt;&lt;p&gt;With over 8 years of experience capturing life's most beautiful moments, Rahul Jo brings a unique blend of technical excellence and artistic vision to every shoot.&lt;/p&gt;
+&lt;p&gt;Specializing in weddings, portraits, fashion, and events, Rahul's work has been featured in leading publications and has served thousands of happy clients across India.&lt;/p&gt;
+&lt;p&gt;His philosophy is simple — every frame should tell a story, evoke emotion, and stand the test of time.&lt;/p&gt;
+&lt;a href="#enquiry" class="btn" style="margin-top:15px"&gt;Let's Collaborate&lt;/a&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class="testimonial"&gt;&lt;div class="wrap"&gt;
+&lt;div class="section-title"&gt;&lt;h2&gt;Client Love&lt;/h2&gt;&lt;/div&gt;
+&lt;div class="t-card"&gt;
+&lt;p&gt;"Rahul captured our wedding with such grace and artistry. Every photo tells a story, and we absolutely love how he made us feel so comfortable during the shoot. Highly recommend!"&lt;/p&gt;
+&lt;p class="name"&gt;— Priya &amp; Arjun, Married 2025&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class="enquiry" id="enquiry"&gt;&lt;div class="wrap"&gt;
+&lt;div class="section-title"&gt;&lt;h2&gt;Enquiry&lt;/h2&gt;&lt;p&gt;Send me a message and I'll get back to you&lt;/p&gt;&lt;/div&gt;
+&lt;form class="enquiry-form" id="enquiryForm"&gt;
+&lt;div class="form-group"&gt;&lt;label for="name">Your Name&lt;/label&gt;&lt;input type="text" id="name" required placeholder="Your full name"&gt;&lt;/div&gt;
+&lt;div class="form-group"&gt;&lt;label for="email">Email&lt;/label&gt;&lt;input type="email" id="email" required placeholder="your@email.com"&gt;&lt;/div&gt;
+&lt;div class="form-group"&gt;&lt;label for="service">Service Interested In&lt;/label&gt;
+&lt;select id="service" style="width:100%;padding:12px 15px;background:var(--card);border:1px solid #333;border-radius:8px;color:var(--txt);font-family:inherit;font-size:1rem"&gt;&lt;option&gt;Wedding Photography&lt;/option&gt;&lt;option&gt;Portrait Session&lt;/option&gt;&lt;option&gt;Fashion Shoot&lt;/option&gt;&lt;option&gt;Event Coverage&lt;/option&gt;&lt;option&gt;Other&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
+&lt;div class="form-group"&gt;&lt;label for="message">Message&lt;/label&gt;&lt;textarea id="message" required placeholder="Tell me about your vision..."&gt;&lt;/textarea&gt;&lt;/div&gt;
+&lt;button type="submit" class="btn" style="width:100%"&gt;Send via WhatsApp&lt;/button&gt;
+&lt;/form&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class="contact" id="contact"&gt;&lt;div class="wrap"&gt;
+&lt;div class="section-title"&gt;&lt;h2&gt;Contact&lt;/h2&gt;&lt;p&gt;Get in touch for bookings and inquiries&lt;/p&gt;&lt;/div&gt;
+&lt;div class="contact-grid"&gt;
+&lt;div class="contact-card"&gt;&lt;h3&gt;WhatsApp&lt;/h3&gt;&lt;p&gt;&lt;a id="waLink"&gt;Click to chat&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class="contact-card"&gt;&lt;h3&gt;Phone&lt;/h3&gt;&lt;p&gt;&lt;a id="telLink"&gt;Call now&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class="contact-card"&gt;&lt;h3&gt;Email&lt;/h3&gt;&lt;p&gt;rahul@rahuljophotography.com&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;footer&gt;
+&lt;p&gt;&amp;copy; 2026 Rahul Jo Photography. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;
+&lt;a class="whatsapp-float" id="waFloat" href="#" aria-label="Chat on WhatsApp"&gt;💬&lt;/a&gt;
+&lt;a class="phone-float" id="phoneFloat" href="#" aria-label="Call Rahul Jo Photography"&gt;📞&lt;/a&gt;
+&lt;script&gt;
+const CONTACT={whatsapp:'919999999999',phone:'+919999999999'};
+const waURL=`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent('Hi Rahul! I would like to make an enquiry for your photography services. My name is:')}`;
+document.getElementById('waLink').href=waURL;
+document.getElementById('waFloat').href=waURL;
+document.getElementById('telLink').href=`tel:${CONTACT.phone}`;
+document.getElementById('phoneFloat').href=`tel:${CONTACT.phone}`;
+document.getElementById('enquiryForm').addEventListener('submit',function(e){
+e.preventDefault();
+const name=document.getElementById('name').value;
+const msg=document.getElementById('message').value;
+const service=document.getElementById('service').value;
+const email=document.getElementById('email').value;
+const text=`*New Enquiry*%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AService: ${encodeURIComponent(service)}%0A%0A${encodeURIComponent(msg)}`;
+window.open(`https://wa.me/${CONTACT.whatsapp}?text=${text}`,'_blank');
+});
+document.getElementById('menuBtn').addEventListener('click',function(){
+document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.filters button').forEach(function(btn){
+btn.addEventListener('click',function(){
+document.querySelectorAll('.filters button').forEach(function(b){b.classList.remove('active')});
+btn.classList.add('active');
+const cat=this.dataset.cat;
+document.querySelectorAll('.gallery img').forEach(function(img){
+if(cat==='all'||img.classList.contains(cat)){img.style.display='block'}else{img.style.display='none'}
+});
+});
+});
+document.querySelectorAll('nav ul a').forEach(function(a){
+a.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open')});
+});
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;
